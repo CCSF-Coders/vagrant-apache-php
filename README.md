@@ -50,6 +50,6 @@ You should see the index.php page. Treat the localhost:6969 like you would the u
 
 ### Who do I talk to? ###
 
-* Repo owner: Tyler Brothers <tylerbrothers1@gmail.com
+Repo owner: Tyler Brothers <tylerbrothers1@gmail.com
 
 [For the CCSF Coders Club](ccsf.edu/coders)
