@@ -39,5 +39,10 @@ Vagrant.configure(2) do |config|
     a2enmod php5
     service apache2 restart
 
+    cd /vagrant
+    git init
+    git remote add origin https://github.com/williamrmyers/New-CCSF-Website
+    git pull origin master
+
   SHELL
 end
