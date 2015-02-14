@@ -25,15 +25,19 @@ Vagrant.configure(2) do |config|
 
   # Setup of the VM
   config.vm.provision "shell", inline: <<-SHELL
-    sudo apt-get update
-    sudo apt-get install -y vim
-    sudo apt-get install -y git
+    apt-get update
+    apt-get install -y vim
+    apt-get install -y git
 
-    sudo apt-get install -y apache2
+    apt-get install -y apache2
     if ! [ -L /var/www ]; then
       rm -rf /var/www
       ln -fs /vagrant /var/www
     fi
+
+    apt-get install libapache2-mod-php5
+    a2enmod php5
+    service apache2 restart
 
   SHELL
 end
