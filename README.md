@@ -26,23 +26,18 @@ Then run the following command in your folder where you cloned this repo (where 
 
 NOTE: This will take ~10 minutes to run fully.
 ```
-#!bash
-
 vagrant up
 ```
 
 Thats it!
 
 ### Where do I code? ###
-Open up the public_html folder and code away. The files in the public_html folder should have the latest code changes to the website.
+Open up the public_html folder and code away. The files in the public_html folder should have the latest code changes to the website. Any changes you make to the files inside the public_html folder are sym-linked to apache's /var/www (in other words: any changes you make will be viewable in your browser)
 
 ### How do I view the website ###
 Open up your browser and navigate to
 
-
 ```
-#!bash
-
 localhost:6969
 ```
 
@@ -50,6 +45,6 @@ You should see the index.php page. Treat the localhost:6969 like you would the u
 
 ### Who do I talk to? ###
 
-Repo owner: Tyler Brothers <tylerbrothers1@gmail.com
+Repo owner: Tyler Brothers <tylerbrothers1@gmail.com>
 
 [For the CCSF Coders Club](ccsf.edu/coders)
