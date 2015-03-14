@@ -41,7 +41,7 @@ Vagrant.configure(2) do |config|
 
     cd /vagrant
     git init
-    git remote add origin https://github.com/williamrmyers/New-CCSF-Website
+    git remote add origin https://github.com/CCSF-Coders/ccsf_coders_website
     git pull origin master
 
   SHELL
