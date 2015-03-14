@@ -25,23 +25,28 @@ Vagrant.configure(2) do |config|
 
   # Setup of the VM
   config.vm.provision "shell", inline: <<-SHELL
+    echo "##### Beginning Update #####"
     apt-get update
+    echo "##### Installing Vim #####"
     apt-get install -y vim
+    echo "##### Installing Git #####"
     apt-get install -y git
-
+    echo "##### Installing Apache2 #####"
     apt-get install -y apache2
     if ! [ -L /var/www ]; then
       rm -rf /var/www
       ln -fs /vagrant /var/www
     fi
 
-    apt-get install libapache2-mod-php5
+    echo "##### Installing libapache2-mod-php5 #####"
+    apt-get install -y libapache2-mod-php5
     a2enmod php5
     service apache2 restart
 
     cd /vagrant
     git init
     git remote add origin https://github.com/CCSF-Coders/ccsf_coders_website
+    echo "##### Cloning Coders Club website repo #####"
     git pull origin master
 
   SHELL
